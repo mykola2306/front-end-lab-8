@@ -12,3 +12,36 @@ a:focus{color:#666;outline:0}ul{padding:0;margin:0}body{background-color:#f2f2f2
 write your code here
 
 */
+
+/* Task 1 */
+@media print{
+   .tm-sidebar, .heading, .blocks, 
+   #ideas, #about, section:nth-child(6){    /* Hide unnecessary sections of the page */
+      display: none;
+   }
+   .tm-banner{                              /* Decrease banner height */
+      height: 250px;
+   }
+   .tm-content-box{                         /* Removing unnecessary space */
+      margin-bottom: 0;
+   }
+   .pad{                                    /* Adjusting padding */
+      padding: 0 60px 0 50px;
+   }
+   .tm-main-content{                        /* Removing margin - content takes take full width of container */
+      margin-left: 0;
+      padding-left: 0;
+   }
+   h2.tm-section-title{                     
+      color: #00F;
+   }
+   .tm-team-description-container{
+      max-width: 100%;
+   }
+   .flex-2-col{                             /* Make img go under the description */
+      flex-direction: column;
+   }
+   footer{                                  /* Add margin to better match tasks 1 assignment picture */
+      margin-top: 25px;
+   }
+}
