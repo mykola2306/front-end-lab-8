@@ -32,10 +32,10 @@ write your code here
       margin-left: 0;
       padding-left: 0;
    }
-   h2.tm-section-title{                     
+   h2.tm-section-title{                     /* Chnage h2 color */       
       color: #00F;
    }
-   .tm-team-description-container{
+   .tm-team-description-container{          /* Take full width of .tm-content-box */
       max-width: 100%;
    }
    .flex-2-col{                             /* Make img go under the description */
@@ -68,4 +68,39 @@ p::first-letter{
 footer p::first-letter{                     /* Remove big letter from footer */
    color: #666;
    font-size: 16px;
+}
+
+
+/* Task 4 */
+.tm-sidebar, .tm-content-box{
+   box-shadow: 0 0 10px #555;
+}
+
+
+/* Task 5 */
+a img{
+   border: 2px solid silver;
+}
+
+
+/* Task 6 */
+.active h2{                                 /* By using .active only h2 with 'How We Do It' changes color */
+   color: gainsboro;
+   letter-spacing: 5px;
+}
+
+
+/* Task 7 */
+h2 + p{
+   font-style: italic;
+}
+
+
+/* Task 8 */
+p{
+   text-indent: 26px;
+   line-height: 30px;
+}
+footer p{                                   /* Remove indentation from footer */
+  text-indent: 0;
 }
