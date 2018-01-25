@@ -16,91 +16,195 @@ write your code here
 /* Task 1 */
 @media print{
    .tm-sidebar, #about, 
-   section:nth-child(n+3){                  /* Hide unnecessary sections of the page */
+   section:nth-child(n+3){                     /* Hide unnecessary sections of the page */
       display: none;
    }
-   .tm-banner{                              /* Decrease banner height */
-      height: 250px;
+   .tm-banner{                                 /* Decrease banner height */
+      height: 200px;
    }
-   .tm-content-box{                         /* Removing unnecessary space */
+   .tm-content-box{                            /* Removing unnecessary space */
       margin-bottom: 0;
    }
-   .pad{                                    /* Adjusting padding */
+   .pad{                                       /* Adjusting padding */
       padding: 0 60px 0 50px;
    }
-   .tm-main-content{                        /* Removing margin - content takes take full width of container */
+   .tm-main-content{                           /* Removing margin - content takes take full width of container */
       margin-left: 0;
-      padding-left: 0;
    }
-   h2.tm-section-title{                     /* Chnage h2 color */       
+   h2.tm-section-title{                        /* Chnage h2 color */       
       color: #00F;
    }
-   .tm-team-description-container{          /* Take full width of .tm-content-box */
+   .tm-team-description-container{             /* Take full width of .tm-content-box */
       max-width: 100%;
    }
-   .flex-2-col{                             /* Make img go under the description */
+   .flex-2-col{                                /* Make img go under the description */
       flex-direction: column;
    }
-   footer{                                  /* Add margin to better match tasks 1 assignment picture */
+   footer{                                     /* Add margin to better match tasks 1 assignment picture */
       margin-top: 25px;
+   }
+   /* .tm-content-box p::first-letter{
+      color: #000;
+      font-size: inherit;
+   } */
+}
+
+
+@media screen{
+   /* Task 2 */
+   .boxes .box{                                /* Removing additional borders */
+      border-bottom: none !important;
+      border-right: none !important;
+   }
+   .box:nth-child(3n){                         /* Added right border to gallery-container */
+      border-right: 1px solid silver !important;
+   }
+   .box:nth-last-child(-n+3){                  /* Added bottom border to gallery-container */
+      border-bottom: 1px solid silver !important;
+   }
+
+
+   /* Task 3 */
+   p::first-letter{
+      color: #76cdd7;
+      font-size: 30px;
+   }
+
+
+   /* Task 4 */
+   .tm-sidebar, 
+   .tm-content-box, 
+   .blocks .tm-team-description-container{
+      box-shadow: 0 0 10px #555;
+   }
+   .blocks .tm-team-description-container{
+      max-width: 100%;
+   }
+   .blocks .tm-team-description-container *{
+      max-width: 410px;
+   }
+
+
+   /* Task 5 */
+   a img{
+      border: 2px solid silver;
+   }
+
+
+   /* Task 6 */
+   .active h2{                                 /* By using .active only h2 with 'How We Do It' changes color */
+      color: gainsboro;
+      letter-spacing: 5px;
+   }
+
+
+   /* Task 7 */
+   h2 + p{
+      font-style: italic;
+   }
+
+
+   /* Task 8 */
+   /* .tm-section-description */
+   .tm-content-box .tm-team-description-container p{
+      text-indent: 26px;
+      line-height: 30px;
+   }
+
+
+   /* Task 9 */
+   .heading h2{
+      color: #74CCD6;
+      text-align: center;
+   }
+   .heading a{
+      color: #000;
+   }
+   .heading a:not(.text)::after{               /* Add '.' to every tag 'a' that does not have class '.text' */
+      content: ".";
+   }
+   .text::after{
+      content: "New"; 
+      color: red;
+      font-size: 10px;
+      vertical-align: super;
+      display: inline-block
+   }
+   .heading a:visited{
+      color: silver;
+   }
+   .heading a:hover{
+      color: #74CCD6;
+   }
+
+
+   /* Task 10 */
+   .gallery-container p::first-letter{
+      color: #000;
+   }
+   .blocks .box-bg{
+      background: #F2F2F2;
+   }
+
+
+   /* Task 11 */
+   .tm-sidebar li:not(:last-child){            /* Add bottom border to every 'li' except last one  */
+      border-bottom: 1px solid silver;
+   }
+
+
+   /* Task 12 */
+   input[type=text],
+   .submit-btn{
+      color: red;
    }
 }
 
 
-/* Task 2 */
-.boxes .box{                                /* Removing additional borders */
-   border-bottom: none !important;
-   border-right: none !important;
-}
-.box:nth-child(3n){                         /* Added right border to gallery-container */
-   border-right: 1px solid silver !important;
-}
-.box:nth-last-child(-n+3){                  /* Added bottom border to gallery-container */
-   border-bottom: 1px solid silver !important;
-}
-
-
-/* Task 3 */
-p::first-letter{
-   color: #76cdd7;
-   font-size: 30px;
-}
-footer p::first-letter{                     /* Remove big letter from footer */
-   color: #666;
-   font-size: 16px;
-}
-
-
-/* Task 4 */
-.tm-sidebar, .tm-content-box{
-   box-shadow: 0 0 10px #555;
-}
-
-
-/* Task 5 */
-a img{
-   border: 2px solid silver;
-}
-
-
-/* Task 6 */
-.active h2{                                 /* By using .active only h2 with 'How We Do It' changes color */
-   color: gainsboro;
-   letter-spacing: 5px;
-}
-
-
-/* Task 7 */
-h2 + p{
-   font-style: italic;
-}
-
-
-/* Task 8 */
-p{
-   text-indent: 26px;
-   line-height: 30px;
-}
-footer p{                                   /* Remove indentation from footer */
-  text-indent: 0;
+/* Task 13 */
+/*  screen and (max-width: 1140px), */
+@media screen and (max-width: 1140px),
+       screen and (max-height: 535px) {
+   .container{
+      max-width: 100%;  
+      padding: 0;
+   }
+   body{
+      padding-top: 0px;
+   }
+   .flex-2-col{                                /* Make img go under the description */
+      flex-direction: column;
+   }
+   .tm-sidebar{
+      position: sticky;
+      z-index: 5;
+      top: 0;
+      width: 100%;
+   }
+   .tm-main-content{
+      max-width: 720px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding-left: 0;
+   }
+   .tm-main-nav{
+      padding: 0;
+   }
+   nav ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    nav li.tm-nav-item {
+      width: calc(100% / 4);
+      text-align: center;
+      padding: 0;
+    }
+   .tm-sidebar li:not(:last-child){            /* Add bottom border to every 'li' except last one  */
+      border: none;
+   }
+   .tm-nav-item-link{
+      padding: 0;
+      margin: 5px 0;      
+   }
 }
