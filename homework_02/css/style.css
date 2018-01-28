@@ -43,16 +43,12 @@ write your code here
    footer{                                     /* Add margin to better match tasks 1 assignment picture */
       margin-top: 25px;
    }
-   /* .tm-content-box p::first-letter{
-      color: #000;
-      font-size: inherit;
-   } */
 }
 
 
 @media screen{
    /* Task 2 */
-   .boxes .box{                                /* Removing additional borders */
+   .boxes .box{                                /* Removing additional borders from both gallery-containers */
       border-bottom: none !important;
       border-right: none !important;
    }
@@ -105,7 +101,6 @@ write your code here
 
 
    /* Task 8 */
-   /* .tm-section-description */
    .tm-content-box .tm-team-description-container p{
       text-indent: 26px;
       line-height: 30px;
@@ -123,13 +118,13 @@ write your code here
    .heading a:not(.text)::after{               /* Add '.' to every tag 'a' that does not have class '.text' */
       content: ".";
    }
-   .text::after{
-      content: "New"; 
+   .text::after{                               
+      content: "New";
       color: red;
       font-size: 10px;
       vertical-align: super;
-      display: inline-block
-   }
+      display: inline-block                   /* When hovering, 'New' will get not have an underline */
+   }                                          /* Other solution: apply ::after to 'li' instead of 'a' */
    .heading a:visited{
       color: silver;
    }
@@ -162,11 +157,10 @@ write your code here
 
 
 /* Task 13 */
-/*  screen and (max-width: 1140px), */
 @media screen and (max-width: 1140px),
        screen and (max-height: 535px) {
-   .container{
-      max-width: 100%;  
+   .container{                                 /* make container take full width */  
+      max-width: 100%;                         /* so that the nav stretches to the sides fully */
       padding: 0;
    }
    body{
@@ -175,7 +169,7 @@ write your code here
    .flex-2-col{                                /* Make img go under the description */
       flex-direction: column;
    }
-   .tm-sidebar{
+   .tm-sidebar{                                /* Make the sidebar go to top */
       position: sticky;
       z-index: 5;
       top: 0;
@@ -189,8 +183,8 @@ write your code here
    }
    .tm-main-nav{
       padding: 0;
-   }
-   nav ul {
+   } 
+   nav ul {                                    /* Make the side bar go from vertical to horizontal */
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -200,10 +194,10 @@ write your code here
       text-align: center;
       padding: 0;
     }
-   .tm-sidebar li:not(:last-child){            /* Add bottom border to every 'li' except last one  */
+   .tm-sidebar li:not(:last-child){            /* Remove border from task 11  */
       border: none;
    }
-   .tm-nav-item-link{
+   .tm-nav-item-link{                          /* Make the nav a little thinner */
       padding: 0;
       margin: 5px 0;      
    }
