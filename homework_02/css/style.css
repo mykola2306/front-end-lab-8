@@ -70,13 +70,13 @@ write your code here
    /* Task 4 */
    .tm-sidebar, 
    .tm-content-box, 
-   .blocks .tm-team-description-container{
+   .blocks .tm-team-description-container{     /* Adding shadow to each content block */
       box-shadow: 0 0 10px #555;
    }
-   .blocks .tm-team-description-container{
+   .blocks .tm-team-description-container{     /* 'Our Work' block takes full width so shadow will be the same lenght as other elements */
       max-width: 100%;
    }
-   .blocks .tm-team-description-container *{
+   .blocks .tm-team-description-container *{   /* Limit width of every tag to match previous design of the website */
       max-width: 410px;
    }
 
