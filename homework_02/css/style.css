@@ -158,7 +158,7 @@ write your code here
 
 /* Task 13 */
 @media screen and (max-width: 1140px),
-       screen and (max-height: 535px) {
+       screen and (max-height: 835px) {
    .container{                                 /* make container take full width */  
       max-width: 100%;                         /* so that the nav stretches to the sides fully */
       padding: 0;
