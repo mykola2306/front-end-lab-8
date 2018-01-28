@@ -1,0 +1,101 @@
+body {
+  background: rgba(198, 238, 252, 0.53); }
+
+#content {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background: #3b3b3b; }
+  #content h1 {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    color: #fccd10;
+    text-transform: uppercase; }
+  #content h2 {
+    margin-top: 0px;
+    color: #fccd10; }
+  #content p {
+    color: #fff; }
+  #content .img-left {
+    border: 2px solid #fccd10;
+    padding: 2px;
+    float: left;
+    margin-right: 20px; }
+  #content .img-right {
+    border: 2px solid #fccd10;
+    padding: 2px;
+    float: right;
+    margin-left: 20px; }
+  #content h1:nth-of-type(2) {
+    padding: 0; }
+  #content a {
+    color: #f5c70f; }
+    #content a:hover {
+      color: #675304; }
+  #content table {
+    border-collapse: collapse;
+    margin-bottom: 59px; }
+    #content table caption {
+      text-align: right; }
+    #content table th {
+      background: #94a34e;
+      text-align: left;
+      font-size: 16px;
+      padding: 10px 0 10px 20px;
+      text-transform: uppercase;
+      font-weight: normal;
+      border-right: 1px solid #fff; }
+    #content table th:last-child {
+      border-right: none; }
+    #content table td {
+      height: 39px;
+      padding-left: 20px;
+      padding-right: 10px;
+      box-sizing: border-box;
+      background: #677d01;
+      color: #fff;
+      border-bottom: 1px solid #94a34e; }
+  #content form .group {
+    display: inline-block; }
+    #content form .group input {
+      width: 470px; }
+  #content form label {
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    color: #f5c70f; }
+  #content form input, #content form textarea {
+    border: 1px solid #94a34e;
+    height: 23px;
+    margin-bottom: 15px;
+    padding-left: 4px;
+    width: 100%; }
+  #content form textarea {
+    padding-top: 5px;
+    height: 150px;
+    margin-bottom: 22px; }
+  #content form input[type="submit"] {
+    height: auto;
+    width: 240px;
+    background: #3b3b3b;
+    border: 1px solid #f5c70f;
+    color: #f5c70f;
+    padding: 11px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 30px; }
+    #content form input[type="submit"]:hover {
+      color: #987b06;
+      border-color: #987b06;
+      text-decoration: underline; }
+
+.brief {
+  background: #fff178;
+  width: 920px;
+  padding: 20px;
+  margin-bottom: 40px; }
+
+/* Include the necessary '.brief' night mode style for design 2 */
+
+/*# sourceMappingURL=style2.css.map */
