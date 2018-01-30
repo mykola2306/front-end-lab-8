@@ -56,10 +56,10 @@ body {
       background: #fff;
       color: #000000;
       border-bottom: 1px solid #e0e0e0; }
-  #content form .group {
+  #content form .group .a {
     display: inline-block; }
-    #content form .group input {
-      width: 470px; }
+  #content form .group input {
+    width: 470px; }
   #content form label {
     text-transform: uppercase;
     display: block;
