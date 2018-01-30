@@ -1,0 +1,7 @@
+body{
+  margin: 0;
+  background-image: url("../img/apples.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* background-color: #cccccc; */
+}
