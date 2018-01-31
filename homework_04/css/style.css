@@ -177,6 +177,13 @@ header button:hover {
   padding-bottom: 27px;
   padding-top: 40px;
   background: linear-gradient(rgba(255, 255, 255, 0), #343638);
+  transition: 0.2s;
+}
+.featured a:hover h3{
+  font-size: 20px;
+  /* text-decoration: underline; */
+  /* color: #9E9E9E; */
+  /* text-shadow: -2px 1px 1px #000000; */
 }
 
 .featured .row:after {
@@ -223,6 +230,14 @@ header button:hover {
   position: absolute;
   top: 19px;
   right: 19px;
+}
+.likes:hover{
+  /* border-color: rgb(104, 57, 57); */
+  cursor: pointer;
+}
+.likes:hover p span{
+  transition: 0.3s;
+  color: rgb(255, 80, 80);
 }
 
 .likes p {
@@ -419,10 +434,13 @@ footer .subscribeInputs input[type="submit"] {
   margin: 0;
 }
 
-nav ul li {
-  padding: 0 0;
+.bottom nav ul li {
+  padding: 0 5px;
+  border-left: 2px solid rgba(0, 0, 0, 0);
+  transition: 0.2s
 }
 
-nav ul li:hover {
+.bottom nav ul li:hover {
   border-bottom: none;
+  border-left: 2px solid #000;
 }
