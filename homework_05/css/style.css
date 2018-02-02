@@ -80,6 +80,7 @@ ul li:hover {
   background: #cccccc;
   padding: 10px;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .featuredItems:hover {
@@ -100,4 +101,30 @@ ul li:hover {
   font-size: 14px;
   margin-top: 4px;
   margin-bottom: 10px;
+}
+
+/* ================ Footer ================ */
+
+footer {
+  color: #fff;
+  background: #39c2d7;
+  padding: 20px 0;
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+footer a {
+  color: #fff;
+  margin-right: 16px;
+}
+
+footer a:hover {
+  text-decoration: none;
+}
+
+footer p {
+  display: inline;
+  font-size: 14px;
+  word-spacing: -1px;
 }
