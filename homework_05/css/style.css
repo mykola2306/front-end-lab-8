@@ -41,6 +41,10 @@ ul li:hover {
 
 /* ================ Banner ================ */
 
+body {
+  border-top: 1px solid #7a7a7a;
+}
+
 .banner {
   margin-top: 14px;
   background-image: url("../img/banner.jpg");
@@ -69,17 +73,19 @@ ul li:hover {
 }
 
 .featured {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 273px 273px 273px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
 }
 
 .featuredItems {
-  max-width: 273px;
   background: #cccccc;
   padding: 10px;
-  margin-bottom: 20px;
   color: #333;
 }
 
@@ -114,6 +120,10 @@ footer {
   font-weight: bold;
 }
 
+footer .links {
+  display: inline-block;
+}
+
 footer a {
   color: #fff;
   margin-right: 16px;
@@ -127,4 +137,79 @@ footer p {
   display: inline;
   font-size: 14px;
   word-spacing: -1px;
+}
+
+/* ================ Media ================ */
+
+@media screen and (max-width: 900px) {
+  header {
+    padding-top: 10px;
+  }
+  nav {
+    padding-top: 6px;
+  }
+  header .container {
+    display: block;
+    text-align: center;
+  }
+  header ul {
+    padding-left: 0;
+    justify-content: center;
+  }
+  header ul li {
+    margin: 0 12px;
+  }
+  .banner {
+    height: 531px;
+    margin-top: 26px;
+  }
+  .banner h1 {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 28px;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    word-spacing: -1px;
+  }
+  .featured {
+    grid-template-columns: auto auto;
+    grid-auto-rows: 260px;
+    padding: 0px;
+  }.featured h4{
+    margin-top: 11px;
+  }
+  .news .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .featured img {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  footer{
+    margin-top: 19px;
+  }
+  footer .container {
+    max-width: 360px;
+  }
+  footer a{
+    margin-right: 25px;
+  }
+  footer a:last-child{
+    margin-right: 0;
+  }
+  footer .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  footer p {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
 }
