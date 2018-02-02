@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -7,7 +11,9 @@ body {
   max-width: 860px;
   margin: 0 auto;
 }
+
 /* ================ Header ================ */
+
 header .container {
   display: flex;
   flex-wrap: wrap;
@@ -32,7 +38,9 @@ ul li {
 ul li:hover {
   color: #39c2d7;
 }
+
 /* ================ Banner ================ */
+
 .banner {
   margin-top: 14px;
   background-image: url("../img/banner.jpg");
@@ -52,4 +60,44 @@ ul li:hover {
   font-size: 40px;
   color: #fff;
   font-weight: normal;
+}
+
+/* ================ News ================ */
+
+.news {
+  margin-top: 20px;
+}
+
+.featured {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.featuredItems {
+  max-width: 273px;
+  background: #cccccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.featuredItems:hover {
+  background: #39c2d7;
+}
+
+.featuredItems img {
+  width: 100%;
+}
+
+.featuredItems h4 {
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.featuredItems p {
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 10px;
 }
