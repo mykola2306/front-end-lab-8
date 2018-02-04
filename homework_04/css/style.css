@@ -25,7 +25,7 @@ header {
   font-family: 'Open Sans', sans-serif;
 }
 
-header .container>a {
+header a:nth-child(1) {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -90,22 +90,24 @@ header p {
   word-spacing: 2px;
 }
 
-header button {
+.button {
+  text-align: center;
   display: block;
-  width: 230px;
-  height: 60px;
   margin: 0px auto;
-  margin-top: 154px;
+  margin-top: 178px;
   background-color: rgba(0, 0, 0, 0.4);
   border: 2px solid #fff;
-  outline: none;
-  color: white;
+  color: #fff;
+  text-decoration: none;
   font-size: 16px;
   cursor: pointer;
   transition: 0.1s;
+  width: 225px;
+  height: 55px;  
+  line-height: 50px;
 }
 
-header button:hover {
+header .button:hover {
   font-size: 20px;
   background-color: rgba(0, 0, 0, 1);
 }
@@ -425,11 +427,10 @@ footer .subscribeInputs input[type="submit"] {
 
 .bottom nav ul li {
   padding: 0 5px;
-  border-left: 2px solid rgba(0, 0, 0, 0);
   transition: 0.2s
 }
 
 .bottom nav ul li:hover {
   border-bottom: none;
-  border-left: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
