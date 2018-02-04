@@ -4,9 +4,6 @@
 
 body {
   margin: 0;
-  /* background-image: url("../img/apples.jpg"); */
-  background-position: center top;
-  background-repeat: no-repeat;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -78,10 +75,7 @@ header h1 {
 }
 
 header span {
-  /* font-family: */
   font-size: 90px;
-  /* margin: 0 20px; */
-  /* font-style: italic; */
 }
 
 header .tradeMark {
@@ -179,11 +173,9 @@ header button:hover {
   background: linear-gradient(rgba(255, 255, 255, 0), #343638);
   transition: 0.2s;
 }
-.featured a:hover h3{
+
+.featured a:hover h3 {
   font-size: 20px;
-  /* text-decoration: underline; */
-  /* color: #9E9E9E; */
-  /* text-shadow: -2px 1px 1px #000000; */
 }
 
 .featured .row:after {
@@ -231,11 +223,12 @@ header button:hover {
   top: 19px;
   right: 19px;
 }
-.likes:hover{
-  /* border-color: rgb(104, 57, 57); */
+
+.likes:hover {
   cursor: pointer;
 }
-.likes:hover p span{
+
+.likes:hover p span {
   transition: 0.3s;
   color: rgb(255, 80, 80);
 }
@@ -320,11 +313,7 @@ input {
   background-color: rgba(0, 0, 0, 1);
 }
 
-/* ------------------------------------------------- */
-
 /* ----------------- Footer Section ---------------- */
-
-/* ------------------------------------------------- */
 
 footer {
   margin-top: 122px;
