@@ -20,6 +20,15 @@ header .container {
   margin-top: 20px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #464547;
+}
+
+nav a:hover {
+  color: #39c2d7;
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -35,10 +44,6 @@ ul li {
   font-weight: bold;
 }
 
-ul li:hover {
-  color: #39c2d7;
-}
-
 /* ================ Banner ================ */
 
 body {
@@ -51,7 +56,6 @@ body {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1216px;
   margin: 0 auto;
   margin-top: 14px;
   height: 377px;
@@ -64,6 +68,7 @@ body {
   font-size: 40px;
   color: #fff;
   font-weight: normal;
+  width: 360px;
 }
 
 /* ================ News ================ */
@@ -73,10 +78,6 @@ body {
 }
 
 .featured {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between; */
   display: grid;
   grid-template-columns: 273px 273px 273px;
   grid-column-gap: 20px;
@@ -86,11 +87,15 @@ body {
 .featuredItems {
   background: #cccccc;
   padding: 10px;
-  color: #333;
 }
 
 .featuredItems:hover {
   background: #39c2d7;
+}
+
+.featuredItems a {
+  text-decoration: none;
+  color: #333;
 }
 
 .featuredItems img {
@@ -115,7 +120,7 @@ footer {
   color: #fff;
   background: #39c2d7;
   padding: 20px 0;
-  margin-top: 2px;
+  margin-top: 20px;
   font-size: 13px;
   font-weight: bold;
 }
@@ -139,7 +144,7 @@ footer p {
   word-spacing: -1px;
 }
 
-/* ================ Media ================ */
+/* ================ Media Tablet ================ */
 
 @media screen and (max-width: 900px) {
   header {
@@ -164,6 +169,7 @@ footer p {
     margin-top: 26px;
   }
   .banner h1 {
+    width: unset;
     max-width: 500px;
     margin: 0 auto;
     text-align: center;
@@ -178,7 +184,8 @@ footer p {
     grid-template-columns: auto auto;
     grid-auto-rows: 260px;
     padding: 0px;
-  }.featured h4{
+  }
+  .featured h4 {
     margin-top: 11px;
   }
   .news .container {
@@ -190,16 +197,16 @@ footer p {
     max-width: 300px;
     margin: 0 auto;
   }
-  footer{
+  footer {
     margin-top: 19px;
   }
   footer .container {
     max-width: 360px;
   }
-  footer a{
+  footer a {
     margin-right: 25px;
   }
-  footer a:last-child{
+  footer a:last-child {
     margin-right: 0;
   }
   footer .links {
@@ -211,5 +218,70 @@ footer p {
     display: block;
     text-align: center;
     margin-top: 20px;
+  }
+}
+
+/* ================ Media Mobile ================ */
+
+@media screen and (max-width: 575px) {
+  header .container {
+    margin-top: 0px;
+  }
+  header img {
+    width: 100px;
+  }
+  header nav {
+    padding-top: 4px;
+  }
+  header ul {
+    text-align: left;
+    flex-direction: column;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  header ul li {
+    background: #eeeeee;
+    border-top: 1px solid #cccccc;
+    padding: 10px 0;
+    padding-left: 20px;
+    margin: 0;
+  }
+  header ul li:last-child {
+    border-bottom: 1px solid #cccccc;
+  }
+  .banner {
+    height: 247px;
+    margin-top: 0px;
+    position: relative;
+  }
+  .banner h1 {
+    background: #39c2d7;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 20px;
+    padding: 6px 11px;
+    position: absolute;
+    bottom: 20px;
+    text-align: left;
+  }
+  .featured {
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    padding: 0px;
+  }
+  .featured p {
+    margin-bottom: 0;
+  }
+  footer {
+    padding-bottom: 10px;
+  }
+  footer .links {
+    flex-direction: column;
+  }
+  footer .links a {
+    margin: 0;
+    text-align: center;
   }
 }
