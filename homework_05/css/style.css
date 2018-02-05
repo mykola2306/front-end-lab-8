@@ -46,10 +46,6 @@ ul li {
 
 /* ================ Banner ================ */
 
-body {
-  border-top: 1px solid #7a7a7a;
-}
-
 .banner {
   margin-top: 14px;
   background-image: url("../img/banner.jpg");
