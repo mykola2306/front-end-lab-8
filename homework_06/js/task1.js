@@ -1,31 +1,31 @@
-function typeAndSquare() {
+function typeAndArea() {
   let phrase = "Type of triangle is ";
-  let square = 0;
-  let sideA = 4.52;
-  let sideB = 4.52;
+  let sideA = 3;
+  let sideB = 4;
   let sideC = 5;
+  let perimeterHalf = (sideA + sideB + sideC) / 2;
+  let area = (Math.sqrt(perimeterHalf * (perimeterHalf - sideA) * (perimeterHalf - sideB) * (perimeterHalf - sideC))).toFixed(2);
 
+  // find biggest side and use it as sideC
   if ((sideA * sideA + sideB * sideB) == sideC * sideC) {
-    phrase += "right triangle ";
-    square = (sideA * sideB) / 2;
-    phrase += "and square is " + square;
+    phrase += "right triangle and area is " + area;    
     console.log(phrase);
   }
-
-  if (sideA == sideB & sideB == sideC) {
-    phrase += "equilateral triangle ";
-    square = ((sideA * sideA * Math.sqrt(3)) / 4).toFixed(2);
-    phrase += "and square is " + square;
+  else if (sideA == sideB & sideB == sideC) {
+    phrase += "equilateral triangle and area is " + area;
     console.log(phrase);
   }
-
-  if (sideA === sideB || sideA === sideC || sideB === sideC) {
-    phrase += "isosceles triangle ";
-    let s = (sideA + sideB + sideC) / 2;
-    square = (Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC))).toFixed(2);
-    phrase += "and square is " + square;
+  else if (sideA === sideB || sideA === sideC || sideB === sideC) {
+    phrase += "isosceles triangle and area is " + area;
     console.log(phrase);
+  }
+  else if (sideA != sideB & sideB != sideC & sideA != sideC) {
+    phrase += "isosceles triangle and area is " + area;
+    console.log(phrase);
+  }
+  else{
+    console.log("unknown");
   }
 }
 
-typeAndSquare();
+typeAndArea();
