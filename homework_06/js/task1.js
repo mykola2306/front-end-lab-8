@@ -1,15 +1,23 @@
-function typeAndSquare(){
+function typeAndSquare() {
   let phrase = "Type of triangle is ";
   let square = 0;
-  let a = 3;
-  let b = 4;
-  let c = 5;
+  let sideA = 4.52;
+  let sideB = 4.52;
+  let sideC = 4.52;
 
-  if((a*a+b*b) == c*c){
+  if ((sideA * sideA + sideB * sideB) == sideC * sideC) {
     phrase += "right triangle ";
-    square = (a*b)/2;
+    square = (sideA * sideB) / 2;
+    phrase += "and square is " + square;
+    console.log(phrase);
+  }
+
+  if (sideA == sideB & sideB == sideC) {
+    phrase += "equilateral triangle ";
+    square = ((sideA * sideA * Math.sqrt(3)) / 4).toFixed(2);
     phrase += "and square is " + square;
     console.log(phrase);
   }
 }
+
 typeAndSquare();
