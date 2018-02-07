@@ -42,17 +42,17 @@ function typeAndArea(sideA, sideB, sideC) {
   if (area % 1 === 0) {
     area = Number.parseInt(area);
   }
-
-  if ((sideA * sideA + sideB * sideB) == sideC * sideC) {
+  
+  if ((sideA * sideA + sideB * sideB) == sideC * sideC) {             // 90* degree triangle
     phrase += "right triangle and area is " + area;
     console.log(phrase);
-  } else if (sideA == sideB & sideB == sideC) {
+  } else if (sideA == sideB & sideB == sideC) {                       // All side equal
     phrase += "equilateral triangle and area is " + area;
     console.log(phrase);
-  } else if (sideA === sideB || sideA === sideC || sideB === sideC) {
+  } else if (sideA === sideB || sideA === sideC || sideB === sideC) { // 2 sides equal
     phrase += "isosceles triangle and area is " + area;
     console.log(phrase);
-  } else if (sideA != sideB & sideB != sideC & sideA != sideC) {
+  } else if (sideA != sideB & sideB != sideC & sideA != sideC) {      // All sides have different length
     phrase += "scalene triangle and area is " + area;
     console.log(phrase);
   }

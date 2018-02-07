@@ -15,7 +15,7 @@ function convertCurrency() {
       euroCash = false;
     }
   }
-
+  
   while (usdCash) {
     usdAmount = prompt("Enter amount of Usd: ");
     if (!isNaN(usdAmount) & (usdAmount !== "")) {
@@ -23,9 +23,9 @@ function convertCurrency() {
     }
   }
 
-  let pharse = euroAmount + " euros are equal " + Math.floor(euroAmount * uahInEuro) +
-    " UAH, " + usdAmount + " dollars are equal " + Math.floor(usdAmount * uahInUsd) +
-    " UAH, one euro is equal " + (uahInEuro / uahInUsd).toFixed(3) + " dollars."
+  let pharse = euroAmount + " euros are equal " + (euroAmount * uahInEuro).toFixed(2) +
+    " UAH, " + usdAmount + " dollars are equal " + (usdAmount * uahInUsd).toFixed(2) +
+    " UAH, one euro is equal " + (uahInEuro / uahInUsd).toFixed(2) + " dollars."
 
   console.log(pharse);
 }
