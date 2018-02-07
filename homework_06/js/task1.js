@@ -10,6 +10,7 @@ function triangleForm() {
   triangleSides.sort(function (a, b) {
     return a - b
   });
+  // parseFloat: '3adf' -> '3'
   let sideA = parseFloat(triangleSides.shift());
   let sideB = parseFloat(triangleSides.shift());
   let sideC = parseFloat(triangleSides.shift());
