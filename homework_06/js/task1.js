@@ -4,12 +4,14 @@ function triangleForm() {
   for (var i = 1; i <= 3; i++) {
     triangleSides.push(prompt("Enter " + i + " number"));
   }
+  console.log(triangleSides)
 
   // sort array from smallest to biggest
   // because i need 'sideC' to be the biggest number for 'right triangle' detection to work correctly
   triangleSides.sort(function (a, b) {
     return a - b
   });
+  console.log(triangleSides)
   // parseFloat: '3adf' -> '3'
   let sideA = parseFloat(triangleSides.shift());
   let sideB = parseFloat(triangleSides.shift());
@@ -27,7 +29,7 @@ function triangleForm() {
     if ((sideA <= 0) || (sideB <= 0) || (sideC <= 0)) {
       console.log("Incorrect data - negative values");
     }
-    if (!(Number.isInteger(sideA)) || !(Number.isInteger(sideB)) || !(Number.isInteger(sideC))) {
+    if ((isNaN(sideA)) || (isNaN(sideB)) || (isNaN(sideC))) {
       console.log("Incorrect data - detected letters/special characters or not defined values");
     }
   }
@@ -42,17 +44,17 @@ function typeAndArea(sideA, sideB, sideC) {
   if (area % 1 === 0) {
     area = Number.parseInt(area);
   }
-  
-  if ((sideA * sideA + sideB * sideB) == sideC * sideC) {             // 90* degree triangle
+
+  if ((sideA * sideA + sideB * sideB) == sideC * sideC) { // 90* degree triangle
     phrase += "right triangle and area is " + area;
     console.log(phrase);
-  } else if (sideA == sideB & sideB == sideC) {                       // All side equal
+  } else if (sideA == sideB & sideB == sideC) { // All side equal
     phrase += "equilateral triangle and area is " + area;
     console.log(phrase);
   } else if (sideA === sideB || sideA === sideC || sideB === sideC) { // 2 sides equal
     phrase += "isosceles triangle and area is " + area;
     console.log(phrase);
-  } else if (sideA != sideB & sideB != sideC & sideA != sideC) {      // All sides have different length
+  } else if (sideA != sideB & sideB != sideC & sideA != sideC) { // All sides have different length
     phrase += "scalene triangle and area is " + area;
     console.log(phrase);
   }
