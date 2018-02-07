@@ -4,14 +4,12 @@ function triangleForm() {
   for (var i = 1; i <= 3; i++) {
     triangleSides.push(prompt("Enter " + i + " number"));
   }
-  console.log(triangleSides)
 
   // sort array from smallest to biggest
   // because i need 'sideC' to be the biggest number for 'right triangle' detection to work correctly
   triangleSides.sort(function (a, b) {
     return a - b
   });
-  console.log(triangleSides)
   // parseFloat: '3adf' -> '3'
   let sideA = parseFloat(triangleSides.shift());
   let sideB = parseFloat(triangleSides.shift());
