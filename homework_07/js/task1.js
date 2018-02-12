@@ -3,8 +3,8 @@ let pyramidBlock = "[~]";
 let spaceBlock = "   ";
 let emptySpace = "";
 let pyramidFloors = Number(prompt("Enter a number from 1-20"));
-
-if ((pyramidFloors >= 1 && pyramidFloors <= 20)) {
+console.log(pyramidFloors);
+if ((pyramidFloors >= 1 && pyramidFloors <= 20) && ((pyramidFloors % 1) == 0)) {
   for (let i = 1; i < pyramidFloors; i++) {
     emptySpace += spaceBlock;
   }
