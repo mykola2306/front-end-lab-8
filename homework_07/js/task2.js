@@ -10,17 +10,17 @@ if (confirm("Do you want to play a game?")) {
   let numberRange = 5;
 
   randonNumber = Math.floor(Math.random() * (numberRange + 1));
-  // console.log("RANDOM - " + randonNumber);
   // Game loop
   for (let i = 0; i < numberOfAttempts;) {
     userNumber = prompt(
       "\nEnter a number from 0 to " + numberRange +
       "\nAttempt left: " + attempt +
-      "\nTotal price " + totalprice +
+      "\nTotal price: " + totalprice +
       "\nPossible price on current attempt: " + price + "$", "0");
     // When guessing the number check if user clicked "Cancel"      
     if (userNumber === null || userNumber === false) {
       if (confirm("Do you want to QUIT?")) {
+        console.log("Thank you for a game. Your price is: " + totalprice + "$");
         break;
       } else {
         continue;
@@ -45,7 +45,6 @@ if (confirm("Do you want to play a game?")) {
       attempt = numberOfAttempts;
       if (confirm("Do you want to continue?")) {
         randonNumber = Math.floor(Math.random() * (numberRange + 1));
-        // console.log("RANDOM - " + randonNumber);
       } else {
         console.log("Thank you for a game. Your price is: " + totalprice + "$");
         break;
@@ -65,7 +64,6 @@ if (confirm("Do you want to play a game?")) {
           totalprice = 0;
           numberRange = 5;
           randonNumber = Math.floor(Math.random() * (numberRange + 1));
-          // console.log("RANDOM - " + randonNumber);
         }
       }
     }
