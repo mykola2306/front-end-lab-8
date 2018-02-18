@@ -6,5 +6,4 @@ function isPrime(number) {
   }
   return number > 1;
 }
-isPrime(5);
 
