@@ -3,7 +3,3 @@ function forEach(arr, func) {
     func(arr[i]);
   }
 }
-
-// forEach([1, 2, 3], function (arrayElement) {
-//   console.log(arrayElement);
-// })

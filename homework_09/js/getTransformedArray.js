@@ -4,10 +4,8 @@ function increment(number) {
 
 function getTransformedArray(arr, increment) {
   let newArray = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArray.push(increment(arr[i]));
-  }
+  forEach(arr, function(arrEl){
+    newArray.push(increment(arrEl));
+  })
   return newArray;
 }
-
-// console.log(getTransformedArray([1, 8, 20], increment))

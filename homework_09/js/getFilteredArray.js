@@ -11,4 +11,3 @@ function getFilteredArray(arr, predicateFunc) {
   });
   return filteredArray;
 }
-// console.log(getFilteredArray([1, 7, 20, 3], predicateFunction))
