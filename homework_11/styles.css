@@ -1,0 +1,40 @@
+
+
+#root>ul {
+  display: block;
+}
+
+.openFolder {
+  display: block;
+}
+
+li {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+li p {
+  margin: 0;
+}
+
+li p:hover {
+  cursor: pointer;
+  background: #EFEFEF;
+}
+
+i {
+  position: relative;
+  top: 3px;
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+.material-icons.orange {
+  color: #EDBC0B;
+}
+
+.material-icons.grey {
+  color: #BBBBBB;
+}
