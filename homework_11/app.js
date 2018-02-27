@@ -22,3 +22,15 @@ function createTree(arrObj) {
 }
 
 rootNode.appendChild(createTree(structure));
+
+let folder = document.querySelectorAll("p")
+for (let i = 0; i < folder.length; i++) {
+  folder[i].addEventListener("click", function () {
+    this.nextSibling.classList.toggle("openFolder");
+    if (this.firstChild.innerHTML === "folder") {
+      this.firstChild.innerHTML = "folder_open"
+    } else {
+      this.firstChild.innerHTML = "folder"
+    }
+  });
+}

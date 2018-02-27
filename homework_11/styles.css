@@ -1,4 +1,7 @@
-
+ul {
+  padding-left: 15px;
+  display: none;
+}
 
 #root>ul {
   display: block;
