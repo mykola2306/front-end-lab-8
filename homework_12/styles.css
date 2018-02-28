@@ -1,1 +1,52 @@
 /* Your styles goes here */
+
+body {
+  background: #1C1C1F;
+  font-family: serif;
+}
+
+h1 {
+  color: #A19E86;
+}
+
+a {
+  cursor: pointer;
+  color: #d6d1ba;
+  font-size: 17px;
+}
+
+a div {
+  width: 220px;
+  padding: 0 10px;
+  display: inline-block;
+  /* background: lightseagreen; */
+}
+
+a div:hover {
+  background: #2c2c2c;
+}
+
+img {
+  width: 100%;
+}
+
+.imgAutoWidth {
+  width: auto;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}
+
+p {
+  /* width: 100px; */
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+p span {
+  color: #a19e89;
+}
