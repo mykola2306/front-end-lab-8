@@ -1,25 +1,42 @@
 // Your code goes here
 let rootNode = document.getElementById("root");
+let pageHeading = document.createElement('h1');
+let page = document.createElement('div')
+let tanksList = document.createElement('div');
 
 function tankPreviewPage(arrTankObj) {
-  let page = document.createElement('div')
-  let pageHeading = document.createElement('h1');
   pageHeading.innerHTML = `Most popular tanks`;
+  page.classList.add("thumbnails");
   page.appendChild(pageHeading);
-  let tanksList = document.createElement('div');
+  tanksList.classList.add('tanksList');
   for (let i = 0; i < arrTankObj.length; i++) {
     let tankItemLink = document.createElement('a');
     let tankItem = document.createElement('div');
+    tankItem.classList.add("ellipsis");
+    tankItem.setAttribute("title", "Click for details");
     let tankImg = document.createElement('img');
+    tankImg.setAttribute("alt", arrTankObj[i].model)
     let tankName = document.createElement('p');
+    let tankFlag = document.createElement('span');
+    tankName.classList.add("tooltipImg")
+    tankFlag.classList.add("tooltipImg")
     if (arrTankObj[i].model) {
       console.log('model: ', arrTankObj[i].model);
       tankItemLink.setAttribute('href', `#${arrTankObj[i].model}`.replace(/\s+/g, '-').toLowerCase());
       tankImg.setAttribute("src", arrTankObj[i].preview);
-      tankImg.setAttribute("alt", arrTankObj[i].model);
-      tankName.innerHTML = `<img alt="${arrTankObj[i].country}" class="imgAutoWidth" src="${arrTankObj[i].country_image}"> <span>${arrTankObj[i].level}</span> ${arrTankObj[i].model}`;
+      tankImg.classList.add("imgBlock");
+      // tankFlag.innerHTML = `heloo`
+      // tankName.innerHTML = `atext`
+      tankFlag.innerHTML = `
+        <span class="tooltipImgText">${arrTankObj[i].country}</span>
+        <img alt="${arrTankObj[i].country}" class="imgAutoWidth" src="${arrTankObj[i].country_image}">`;
+      tankName.innerHTML = `
+      <span class="tooltipName">${arrTankObj[i].model}</span>
+      <span>${arrTankObj[i].level}</span> ${arrTankObj[i].model}`;
+
       // tankItem.innerHTML = arrTankObj[i].model;
       tankItem.appendChild(tankImg);
+      tankItem.appendChild(tankFlag);
       tankItem.appendChild(tankName);
       tankItemLink.appendChild(tankItem);
       tanksList.appendChild(tankItemLink);
@@ -40,11 +57,4 @@ function tankPreviewPage(arrTankObj) {
   page.appendChild(tanksList);
   return page;
 }
-rootNode.appendChild(tankPreviewPage(tanks));
 
-window.addEventListener("hashchange", myFunction);
-
-function myFunction() {
-  console.log('The anchor part has changed!');
-  console.log(location.hash);
-}

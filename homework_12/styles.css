@@ -19,7 +19,8 @@ a div {
   width: 220px;
   padding: 0 10px;
   display: inline-block;
-  /* background: lightseagreen; */
+  position: relative;
+  text-align: center;
 }
 
 a div:hover {
@@ -38,15 +39,119 @@ img {
 }
 
 p {
-  /* width: 100px; */
-  text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  display: inline;
+}
+
+p span {
+  color: #a19e89;
+}
+
+[title]:before {
+  content: attr(title);
+  position: absolute;
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 140px;
+  text-align: center;
+}
+
+[title]:hover:before {
+  opacity: 1;
+  background: rgba(255, 255, 0, 0.5);
+  margin-top: 0px;
+}
+
+.tooltipImg {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltipImg .tooltipImgText,
+.tooltipImg .tooltipName {
+  visibility: hidden;
+  opacity: 0;
+  width: 60px;
+  font-size: 15px;
+  color: #d6d1ba;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 17px;
+  margin-left: -30px;
+  transition: 0.2s;
+}
+.tooltipImg .tooltipName {
+  width: unset;
+  text-align: left;
+  /* margin-left: -90px; */
+  left: unset;
+  padding-left: 20px;
+  font-size: 20px;
+  white-space: normal;
+  color: #7c765b;
+}
+
+.tooltipImg:hover .tooltipImgText,
+.tooltipImg:hover .tooltipName {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ellipsis{
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-p span {
+.container{
+  width: 220px;
+  min-height: 20px;
+  background: green;
+  color: floralwhite;
+  font-size: 19px;
+  text-transform: uppercase;
+  /* text-overflow: ellipsis; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+}
+.container p{
+  /* width: 100px; */
+  display: inline;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+}
+.container img{
+  width: auto; 
+}
+
+.imgBlock{
+  display: block;
+}
+
+.tank-details {
   color: #a19e89;
+}
+.tank-details h1{
+  text-transform: uppercase;
+}
+.tank-details h1 span{
+  text-transform: lowercase;
+}
+.tank-details h1 img{
+  width: auto;
 }
