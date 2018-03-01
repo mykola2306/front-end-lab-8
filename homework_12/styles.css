@@ -48,8 +48,8 @@ p span {
   color: #a19e89;
 }
 
-[title]:before {
-  content: attr(title);
+[aria-label]:before {
+  content: attr(aria-label);
   position: absolute;
   opacity: 0;
   transition: all 0.2s ease;
@@ -65,7 +65,7 @@ p span {
   text-align: center;
 }
 
-[title]:hover:before {
+[aria-label]:hover:before {
   opacity: 1;
   background: rgba(255, 255, 0, 0.5);
   margin-top: 0px;
@@ -74,6 +74,7 @@ p span {
 .tooltipImg {
   position: relative;
   display: inline-block;
+  margin-left: 5px;
 }
 
 .tooltipImg .tooltipImgText,
@@ -91,6 +92,10 @@ p span {
   bottom: 17px;
   margin-left: -30px;
   transition: 0.2s;
+}
+.tank-details .tooltipImg .tooltipImgText{
+  bottom: -10px;
+  margin-left: -25px;
 }
 
 .tooltipImg .tooltipName {
@@ -162,19 +167,30 @@ p span {
   width: auto;
 }
 
+.tank-details a {
+  color: #a19e89;
+  text-decoration: none;
+}
+
+.tank-details a:hover {
+  color: #a39739;  
+}
+
 .detailsImg {
   width: 40%;
   vertical-align: top;
-  background: rgb(68, 134, 128);
+  /* background: rgb(68, 134, 128); */
 }
-.detailsImg img{
+
+.detailsImg img {
   max-width: 100%;
 }
 
 .detailsTable {
   width: 60%;
   vertical-align: top;
-  background: rgb(27, 87, 82);
+  margin-bottom: 10px;
+  /* background: rgb(27, 87, 82); */
 }
 
 .detailsImg,
@@ -182,6 +198,26 @@ p span {
   display: inline-block;
 }
 
-.detailsTable tr{
-  /* width: 100%; */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d6d1ba;
+}
+
+td {
+  border: 1px solid #a19e89;
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .detailsImg {
+    width: 50%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .detailsTable {
+    display: block;
+    width: 100%;
+  }
 }

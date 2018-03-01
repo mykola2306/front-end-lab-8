@@ -1,3 +1,4 @@
+location.hash = "";
 // Your code goes here
 let rootNode = document.getElementById("root");
 let pageHeading = document.createElement('h1');
@@ -5,7 +6,7 @@ let page = document.createElement('div')
 let tanksList = document.createElement('div');
 
 function tankPreviewPage(arrTankObj) {
-  pageHeading.innerHTML = `Most popular tanks`;
+  pageHeading.innerHTML = `Most popular tanks`;  
   page.classList.add("thumbnails");
   page.appendChild(pageHeading);
   tanksList.classList.add('tanksList');
@@ -13,7 +14,7 @@ function tankPreviewPage(arrTankObj) {
     let tankItemLink = document.createElement('a');
     let tankItem = document.createElement('div');
     tankItem.classList.add("ellipsis");
-    tankItem.setAttribute("title", "Click for details");
+    tankItem.setAttribute("aria-label", "Click for details");
     let tankImg = document.createElement('img');
     tankImg.setAttribute("alt", arrTankObj[i].model)
     let tankName = document.createElement('p');
@@ -64,16 +65,19 @@ function tankDetails(tank) {
   page.classList.remove("thumbnails");
   page.classList.add("tank-details");
   document.querySelector(".tanksList").innerHTML = ``;
-  pageHeading.innerHTML = `<img src="${tank.country_image}"> ${tank.model} (<span>level ${tank.level}</span>)`;
+  pageHeading.innerHTML = `<span class="tooltipImg"><span class="tooltipImgText">${tank.country}</span><img src="${tank.country_image}"></span> ${tank.model} (<span>level ${tank.level}</span>)`;
   let detailsImg = document.createElement('div');
   detailsImg.classList.add("detailsImg");
+  detailsImg.innerHTML = `<h2>Preview</h2><img src="${tank.preview}" alt="${tank.model}">`;
   let detailsTable = document.createElement('div');
   detailsTable.classList.add("detailsTable");
-  detailsImg.innerHTML = `<h2>Preview</h2><img src="${tank.preview}" alt="${tank.model}">`;
   detailsTable.innerHTML = `<h2>Characteristic</h2>`;
   detailsTable.appendChild(buildTable(tank.details));
+  let returnToThumbnails = document.createElement('div');
+  returnToThumbnails.innerHTML = `<a aria-label="services for cars" href="#">Back to list view</a>`;
   tanksList.appendChild(detailsImg);
   tanksList.appendChild(detailsTable);
+  tanksList.appendChild(returnToThumbnails);
 }
 
 function buildTable(table) {
@@ -103,4 +107,12 @@ window.addEventListener("hashchange", function () {
       return;
     }
   }
+  if(location.hash = "#"){
+    console.log("YES CHANGE!!!!");
+    tanksList.innerHTML = "";
+    page.classList.remove("tank-details");
+    page.classList.add("thumbnails");
+    rootNode.appendChild(tankPreviewPage(tanks));
+  }
 });
+
