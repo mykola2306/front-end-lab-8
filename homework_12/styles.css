@@ -92,6 +92,7 @@ p span {
   margin-left: -30px;
   transition: 0.2s;
 }
+
 .tooltipImg .tooltipName {
   width: unset;
   text-align: left;
@@ -109,13 +110,13 @@ p span {
   opacity: 1;
 }
 
-.ellipsis{
+.ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
-.container{
+.container {
   width: 220px;
   min-height: 20px;
   background: green;
@@ -128,30 +129,59 @@ p span {
   overflow: hidden;
   text-align: center;
 }
-.container p{
+
+.container p {
   /* width: 100px; */
   display: inline;
   /* text-overflow: ellipsis; */
   /* white-space: nowrap; */
   /* overflow: hidden; */
 }
-.container img{
-  width: auto; 
+
+.container img {
+  width: auto;
 }
 
-.imgBlock{
+.imgBlock {
   display: block;
 }
 
 .tank-details {
   color: #a19e89;
 }
-.tank-details h1{
+
+.tank-details h1 {
   text-transform: uppercase;
 }
-.tank-details h1 span{
+
+.tank-details h1 span {
   text-transform: lowercase;
 }
-.tank-details h1 img{
+
+.tank-details h1 img {
   width: auto;
+}
+
+.detailsImg {
+  width: 40%;
+  vertical-align: top;
+  background: rgb(68, 134, 128);
+}
+.detailsImg img{
+  max-width: 100%;
+}
+
+.detailsTable {
+  width: 60%;
+  vertical-align: top;
+  background: rgb(27, 87, 82);
+}
+
+.detailsImg,
+.detailsTable {
+  display: inline-block;
+}
+
+.detailsTable tr{
+  /* width: 100%; */
 }

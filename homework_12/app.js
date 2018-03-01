@@ -58,3 +58,49 @@ function tankPreviewPage(arrTankObj) {
   return page;
 }
 
+function tankDetails(tank) {
+  console.log(tank);
+  console.log(tank.model);
+  page.classList.remove("thumbnails");
+  page.classList.add("tank-details");
+  document.querySelector(".tanksList").innerHTML = ``;
+  pageHeading.innerHTML = `<img src="${tank.country_image}"> ${tank.model} (<span>level ${tank.level}</span>)`;
+  let detailsImg = document.createElement('div');
+  detailsImg.classList.add("detailsImg");
+  let detailsTable = document.createElement('div');
+  detailsTable.classList.add("detailsTable");
+  detailsImg.innerHTML = `<h2>Preview</h2><img src="${tank.preview}" alt="${tank.model}">`;
+  detailsTable.innerHTML = `<h2>Characteristic</h2>`;
+  detailsTable.appendChild(buildTable(tank.details));
+  tanksList.appendChild(detailsImg);
+  tanksList.appendChild(detailsTable);
+}
+
+function buildTable(table) {
+  console.log(table);
+  let tableBuild = document.createElement('table');
+  for (var key in table) {
+    // console.log(key + " -> " + table[key]);
+    let row = document.createElement('tr');
+    let tdName = document.createElement('td');
+    tdName.innerText = key.replace(/_/g, ' ');;
+    let tdValue = document.createElement('td');
+    tdValue.innerText = table[key];
+    row.appendChild(tdName);
+    row.appendChild(tdValue);
+    tableBuild.appendChild(row);
+  }
+  return tableBuild;
+}
+
+rootNode.appendChild(tankPreviewPage(tanks));
+// tankDetails(tanks[2]);
+window.addEventListener("hashchange", function () {
+  console.log('The anchor part has changed!');
+  for (let i = 0; i < tanks.length; i++) {
+    if (location.hash === `#${tanks[i].model}`.replace(/\s+/g, '-').toLowerCase()) {
+      tankDetails(tanks[i]);
+      return;
+    }
+  }
+});
