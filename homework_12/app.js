@@ -14,7 +14,7 @@ function tankPreviewPage(arrTankObj) {
 
   // Generate thumbnails
   for (let i = 0; i < arrTankObj.length; i++) {
-    // Container for each thumbnail
+    // Creating a container for each thumbnail and necessary elements for the custom tooltips
     let tankItemLink = document.createElement('a');
     let tankItem = document.createElement('div');
     tankItem.classList.add("ellipsis");
@@ -30,7 +30,7 @@ function tankPreviewPage(arrTankObj) {
     tankFlag.classList.add("tooltipImg");
 
     if (arrTankObj[i].model) {
-      // hash is replaced spaces with '-' for the url
+      // hash with spaces is replaced with '-' for the url
       tankItemLink.setAttribute('href', `#${arrTankObj[i].model}`.replace(/\s+/g, '-').toLowerCase());
       tankImg.setAttribute("src", arrTankObj[i].preview);
       tankImg.setAttribute("alt", arrTankObj[i].model);
@@ -65,8 +65,10 @@ function tankPreviewPage(arrTankObj) {
 function tankDetails(tank) {
   page.classList.remove("thumbnails");
   page.classList.add("tank-details");
+  // Clear content of the preview page
   document.querySelector(".tanksList").textContent = ``;
   pageHeading.textContent = ``;
+  // Tank details heading
   let pageHeadingToolTip = document.createElement('span');
   pageHeadingToolTip.classList.add("tooltipImg");
   let toolTipImgText = document.createElement('span');
@@ -84,6 +86,7 @@ function tankDetails(tank) {
   pageHeading.appendChild(document.createTextNode(" " + tank.model));
   pageHeading.appendChild(headingLevel);
 
+  // Tank details - tank img preview
   let detailsLeft = document.createElement('div');
   detailsLeft.classList.add("detailsLeft");
   let detailsH2 = document.createElement('h2');
@@ -94,6 +97,7 @@ function tankDetails(tank) {
   detailsLeft.appendChild(detailsH2);
   detailsLeft.appendChild(detailsImg);
 
+  // Tank details - table
   let detailsTable = document.createElement('div');
   detailsTable.classList.add("detailsTable");
   let detailsTableH2 = document.createElement('h2');
@@ -108,6 +112,7 @@ function tankDetails(tank) {
   tanksList.appendChild(returnToThumbnails);
 }
 
+// Table is built here
 function buildTable(table) {
   let tableBuild = document.createElement('table');
   for (var key in table) {
@@ -123,8 +128,7 @@ function buildTable(table) {
   return tableBuild;
 }
 
-rootNode.appendChild(tankPreviewPage(tanks));
-
+// Check if a thumbnail is pressed
 window.addEventListener("hashchange", function () {
   for (let i = 0; i < tanks.length; i++) {
     if (location.hash === `#${tanks[i].model}`.replace(/\s+/g, '-').toLowerCase()) {
@@ -140,3 +144,6 @@ window.addEventListener("hashchange", function () {
     rootNode.appendChild(tankPreviewPage(tanks));
   }
 });
+
+// Insert tanks preview page with thumbnails 
+rootNode.appendChild(tankPreviewPage(tanks));
