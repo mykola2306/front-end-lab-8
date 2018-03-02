@@ -76,12 +76,13 @@ function tankDetails(tank) {
   headingImg.setAttribute("src", tank.country_image);
   headingImg.setAttribute("alt", tank.country);
   let headingLevel = document.createElement('span');
-  headingLevel.textContent = `level ${tank.level}`;
+  headingLevel.textContent = ` (level ${tank.level})`;
 
   pageHeadingToolTip.appendChild(toolTipImgText);
   pageHeadingToolTip.appendChild(headingImg);
   pageHeading.appendChild(pageHeadingToolTip);
   pageHeading.appendChild(document.createTextNode(" " + tank.model));
+  pageHeading.appendChild(headingLevel);
 
   let detailsLeft = document.createElement('div');
   detailsLeft.classList.add("detailsLeft");
